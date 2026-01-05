@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Brown Beans Cafe | Premium Experience</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Italiana&family=Montserrat:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- GSAP & Lenis -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.29/bundled/lenis.min.js"></script>
+
+    <!-- Link to your CSS file -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Custom Cursor -->
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+
+    <!-- Preloader -->
+    <div class="preloader">
+      <div class="loader-text"><span>BROWN</span> <span>BEANS</span></div>
+      <p class="loader-sub">MANJERI</p>
+    </div>
+
+    <!-- Navigation -->
+    <nav>
+      <div class="nav-logo">
+        <div class="logo-icon">
+          <img src="/assets/logo1.png" alt="Brown Beans Logo" />
+        </div>
+        <h1>BROWN BEANS</h1>
+      </div>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#menu">Menu</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <!-- Mobile Menu Trigger -->
+      <div class="menu-toggle" onclick="toggleMenu()">
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+    </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-overlay">
+      <a href="#about" onclick="toggleMenu()">About</a>
+      <a href="#menu" onclick="toggleMenu()">Menu</a>
+      <a href="#contact" onclick="toggleMenu()">Contact</a>
+      <div class="close-menu" onclick="toggleMenu()">Close</div>
+    </div>
+
+    <!-- Hover Reveal Image Container -->
+    <div class="hover-reveal">
+      <img src="" class="hover-reveal-img" alt="Menu Preview" />
+    </div>
+
+    <!-- Hero -->
+    <section class="hero">
+      <div class="hero-bg" data-speed="0.5"></div>
+
+      <div class="hero-title">
+        <p class="hero-subtitle gs-fade">EST. 2023</p>
+        <h1>
+          <div class="line">Count Memories</div>
+          <div class="line">Not Calories</div>
+        </h1>
+        <br />
+        <a href="#menu" class="btn-magnet gs-fade">View Menu</a>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section class="container about" id="about">
+      <div class="about-grid">
+        <div class="about-text">
+          <p class="uppercase gold-text">The Vibe</p>
+          <h2>More than just a Cafe.</h2>
+          <p>
+            Located at IGBT Bypass, Thurakkal, Brown Beans is a sanctuary for
+            taste. With a 4.3-star rating and over 1,000 reviews, we pride
+            ourselves on creamy alfredos, perfectly brewed cappuccinos, and an
+            ambiance that turns a quick bite into a lasting memory.
+          </p>
+          <div class="stats">
+            <span style="font-size: 2rem; color: #fff">1k+</span>
+            <span style="color: #666; margin-right: 20px">Reviews</span>
+            <span style="font-size: 2rem; color: #fff">4.3</span>
+            <span style="color: #666">Rating</span>
+          </div>
+        </div>
+        <div class="about-img-wrap">
+          <img
+            src="https://lh3.googleusercontent.com/gps-cs-s/AG0ilSxNIQrdcjP1nQToaQ0TySLiSpJ_RoCtxYxohCnTERqRwWYf9DzvkV-Ezx8gTKbm_bNS9U0IEWK-kWkCBD7oVhhIdYu6vWCl475FbKxYGPXa2yVniZVrJ5BvtHmNmDOAGzVIr2Ll=s1024-v1"
+            alt="Cafe Interior"
+            data-speed="0.9"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive Menu -->
+    <section class="container menu-interactive" id="menu">
+      <p class="uppercase gold-text" style="margin-bottom: 50px">
+        Curated Menu
+      </p>
+
+      <div class="menu-list">
+        <!-- Item 1 -->
+        <div
+          class="menu-item"
+          data-img="https://images.unsplash.com/photo-1645112411341-6c4fd023714a?q=80&w=2670&auto=format&fit=crop"
+        >
+          <h3>Creamy Alfredo</h3>
+          <span>Must Try</span>
+        </div>
+        <!-- Item 2 -->
+        <div
+          class="menu-item"
+          data-img="https://images.unsplash.com/photo-1572442388796-11668a67e53d?q=80&w=2670&auto=format&fit=crop"
+        >
+          <h3>Regular Cappuccino</h3>
+          <span>Popular</span>
+        </div>
+        <!-- Item 3 -->
+        <div
+          class="menu-item"
+          data-img="https://images.unsplash.com/photo-1529006557810-274b9b2fc783?q=80&w=2676&auto=format&fit=crop"
+        >
+          <h3>Special Shawarma</h3>
+          <span>Bestseller</span>
+        </div>
+        <!-- Item 4 -->
+        <div
+          class="menu-item"
+          data-img="https://images.unsplash.com/photo-1600891964092-4316c288032e?q=80&w=2670&auto=format&fit=crop"
+        >
+          <h3>Steak & Grill</h3>
+          <span>Dinner</span>
+        </div>
+        <!-- Item 5 -->
+        <div
+          class="menu-item"
+          data-img="https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?q=80&w=2574&auto=format&fit=crop"
+        >
+          <h3>Mojitos & Shakes</h3>
+          <span>Refresh</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Infinite Marquee -->
+    <section class="marquee-section">
+      <div class="marquee-inner">
+        COFFEE • CONTINENTAL • STEAKS • SHAWARMA • MOJITOS • PASTA • COFFEE •
+        CONTINENTAL • STEAKS • SHAWARMA • MOJITOS • PASTA •
+      </div>
+    </section>
+
+    <!-- Gallery -->
+    <section class="container gallery-section">
+      <div class="gallery-grid">
+        <div class="g-item gs-up">
+          <img
+            src="https://lh3.googleusercontent.com/gps-cs-s/AG0ilSwUQKsjKn3ziNIXGLv6xGM3PcsDY5OxGPcqek7vdVPOV_mAi1wsUZJOiwk7KEEBsOMKxUuBB4v1hjEFyN6cKEV6Efi9IxOfq7wwaOrkpox4p-2v3lwB1rXDNjyU2r46F-BNRnSv=s1024-v1"
+            alt="Coffee"
+          />
+        </div>
+        <div class="g-item gs-up">
+          <img
+            src="https://lh3.googleusercontent.com/gps-cs-s/AG0ilSxe54ACwFOvT_JAkWnLvsx8wCU3G_ZIGcCt8miLTJRgy0itqd3j_-m_7Pbz08QAc7-eDc_lMI2OqgcgrFPHu3_zuVEJ7Tbi9OsU0qb4LLiJGLEJiM2dPAqy7kslFTVZlLX3uyCA=s3072-v1"
+            alt="Place"
+          />
+        </div>
+        <div class="g-item gs-up">
+          <img
+            src="https://lh3.googleusercontent.com/gps-cs-s/AG0ilSxxpWwjxxEmX0w6tFZiR6_FantrqlgXLiqjppbh-RFZyuqZVZ9S2wCmSDwK-kFRvYvdUjxPcQoFnte8ck0AoUBByq6hSHd0kL-986qWkhl0x-bxIPS8WxSOPqD9TimpPItdZmkk=s563-k-no"
+            alt="Food"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+      <div class="container contact-grid">
+        <div class="c-col">
+          <h4>Visit Us</h4>
+          <p>Near AM Honda, Bypass Road</p>
+          <p>Thurakkkal, Manjeri 676121</p>
+          <br />
+          <a href="https://maps.app.goo.gl/eDcA2jaNaWMSP3Dy6" class="gold-text"
+            >Get Directions →</a
+          >
+        </div>
+        <div class="c-col">
+          <h4>Opening Hours</h4>
+          <p>Sat - Thu</p>
+          <p>10:30 AM - 10:30 PM</p>
+          <p>Fri - 01:30 PM - 10:30 PM</p>
+        </div>
+        <div class="c-col">
+          <h4>Contact</h4>
+          <p>+91 91882 22233</p>
+          <p>brownbeans@cafe.com</p>
+          <div style="margin-top: 20px">
+            <a
+              href="tel:9188222233"
+              class="btn-magnet"
+              style="padding: 10px 20px; font-size: 0.8rem"
+              >Call Now</a
+            >
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-big-text">BROWN BEANS</div>
+    </footer>
+
+    <script>
+
+        
+      // 0. Mobile Menu Logic
+      function toggleMenu() {
+        const overlay = document.querySelector(".mobile-overlay");
+        overlay.classList.toggle("active");
+      }
+
+      // 1. Initialize Lenis (Smooth Scrolling)
+      const lenis = new Lenis({
+        duration: 1.2,
+        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+        direction: "vertical",
+        gestureDirection: "vertical",
+        smooth: true,
+        mouseMultiplier: 1,
+        smoothTouch: false,
+        touchMultiplier: 2,
+      });
+
+      function raf(time) {
+        lenis.raf(time);
+        requestAnimationFrame(raf);
+      }
+      requestAnimationFrame(raf);
+
+      // 2. Custom Cursor Logic
+      if (window.matchMedia("(pointer: fine)").matches) {
+        const cursorDot = document.querySelector(".cursor-dot");
+        const cursorOutline = document.querySelector(".cursor-outline");
+
+        window.addEventListener("mousemove", (e) => {
+          const posX = e.clientX;
+          const posY = e.clientY;
+
+          cursorDot.style.left = `${posX}px`;
+          cursorDot.style.top = `${posY}px`;
+
+          gsap.to(cursorOutline, {
+            x: posX,
+            y: posY,
+            duration: 0.15,
+            ease: "power2.out",
+          });
+        });
+
+        const hoverables = document.querySelectorAll(
+          "a, .menu-item, button, .menu-toggle"
+        );
+        hoverables.forEach((el) => {
+          el.addEventListener("mouseenter", () =>
+            document.body.classList.add("hovering")
+          );
+          el.addEventListener("mouseleave", () =>
+            document.body.classList.remove("hovering")
+          );
+        });
+      }
+
+      // 3. Preloader Animation
+      const tlLoader = gsap.timeline();
+      tlLoader
+        .to(".loader-text span", {
+          y: 0,
+          duration: 1,
+          stagger: 0.1,
+          ease: "power4.out",
+        })
+        .to(".loader-text span", {
+          y: -100,
+          duration: 0.8,
+          delay: 0.5,
+          ease: "power4.in",
+        })
+        .to(
+          ".preloader",
+          {
+            y: "-100%",
+            duration: 1,
+            ease: "power4.inOut",
+          },
+          "-=0.3"
+        );
+
+      // 4. Hero & Scroll Animations
+      gsap.registerPlugin(ScrollTrigger);
+
+      gsap.to(".hero-bg", {
+        scrollTrigger: {
+          trigger: ".hero",
+          start: "top top",
+          end: "bottom top",
+          scrub: true,
+        },
+        yPercent: 30,
+        ease: "none",
+      });
+
+      gsap.from(".hero-title h1", {
+        y: 100,
+        opacity: 0,
+        duration: 1.5,
+        delay: 2.5,
+        ease: "power4.out",
+      });
+
+      gsap.from(".gs-fade", {
+        y: 20,
+        opacity: 0,
+        duration: 1,
+        delay: 3,
+        stagger: 0.2,
+      });
+
+      // 5. Interactive Menu Hover Reveal (Desktop Only)
+      if (window.innerWidth > 768) {
+        const menuItems = document.querySelectorAll(".menu-item");
+        const revealImgContainer = document.querySelector(".hover-reveal");
+        const revealImg = document.querySelector(".hover-reveal-img");
+
+        menuItems.forEach((item) => {
+          item.addEventListener("mouseenter", (e) => {
+            const imgUrl = item.getAttribute("data-img");
+            revealImg.src = imgUrl;
+
+            gsap.to(revealImgContainer, {
+              opacity: 1,
+              scale: 1,
+              duration: 0.3,
+              ease: "power2.out",
+            });
+          });
+
+          item.addEventListener("mouseleave", () => {
+            gsap.to(revealImgContainer, {
+              opacity: 0,
+              scale: 0.8,
+              duration: 0.3,
+              ease: "power2.out",
+            });
+          });
+
+          item.addEventListener("mousemove", (e) => {
+            gsap.to(revealImgContainer, {
+              x: e.clientX,
+              y: e.clientY,
+              duration: 0.5,
+              ease: "power2.out",
+            });
+          });
+        });
+      }
+
+      // 6. Gallery Scroll Animation
+      gsap.utils.toArray(".gs-up").forEach((elem) => {
+        gsap.from(elem, {
+          scrollTrigger: {
+            trigger: elem,
+            start: "top 85%",
+          },
+          y: 100,
+          opacity: 0,
+          duration: 1.2,
+          ease: "power3.out",
+        });
+      });
+
+      // 7. Parallax Image in About
+      gsap.to(".about-img-wrap img", {
+        scrollTrigger: {
+          trigger: ".about-img-wrap",
+          start: "top bottom",
+          end: "bottom top",
+          scrub: true,
+        },
+        y: -50,
+        ease: "none",
+      });
+
+      
+    </script>
+  </body>
+</html>
+
