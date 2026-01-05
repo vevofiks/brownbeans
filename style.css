@@ -123,7 +123,7 @@ nav {
   justify-content: space-between;
   align-items: center;
   z-index: 100;
-  mix-blend-mode: difference; 
+  mix-blend-mode: normal; 
 }
 
 .nav-logo {
@@ -145,6 +145,8 @@ nav {
   border: 1px solid var(--gold);
   /* box-shadow: 0 0 15px rgba(212, 175, 55, 0.2); */
   transition: transform 0.3s ease;
+  z-index: 101;
+  position: relative;
 }
 
 .logo-icon img {
@@ -411,6 +413,8 @@ h4 {
   align-items: center;
   transition: 0.3s;
   cursor: pointer;
+  flex-wrap: wrap;
+  gap: 15px;
 }
 .menu-item:hover {
   padding-left: 20px;
@@ -423,11 +427,14 @@ h4 {
 .menu-item h3 {
   font-size: 3rem;
   transition: 0.3s;
+  flex: 1;
+  min-width: 200px;
 }
 .menu-item span {
   font-size: 1.2rem;
   font-family: var(--font-body);
   color: var(--grey);
+  white-space: nowrap;
 }
 
 /* Floating Image */
@@ -539,6 +546,10 @@ footer {
     grid-template-columns: 1fr;
     gap: 40px;
   }
+
+  .about-text {
+    padding: 0 20px;
+  }
   .about-img-wrap {
     height: 400px;
   }
@@ -546,14 +557,45 @@ footer {
     font-size: 2.8rem;
   }
 
-  /* Menu Item Fonts */
+  /* Interactive Menu Section */
+  .menu-interactive {
+    padding: 60px 0;
+  }
+
+  /* Menu Item Adjustments */
+  .menu-item {
+    padding: 25px 20px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  #menu .gold-text {
+    font-size: 20px;
+    padding-left: 10px;
+    margin-bottom: 35px;
+    border-bottom: #f0f0f0;
+  }
+  .menu-item:hover {
+    padding-left: 0;
+  }
   .menu-item h3 {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
+  }
+  .menu-item span {
+    font-size: 0.9rem;
   }
 
   /* Disable Float Image on Mobile */
   .hover-reveal {
     display: none !important;
+  }
+
+  .gallery-section {
+    padding: 0 10px;
+  }
+
+  .gallery-grid img {
+    border-radius: 6%;
   }
 
   /* Gallery Grid */
@@ -565,6 +607,7 @@ footer {
     margin-top: 0 !important;
     height: 300px;
   }
+
 
   /* Footer */
   .contact-grid {
